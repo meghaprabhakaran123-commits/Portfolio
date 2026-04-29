@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+/* =====================================================
+   DESIGN SYSTEM — Megha Prabhakaran Portfolio
+   ===================================================== */
+
+/* --- Custom Theme Tokens --- */
+@theme {
+  --color-cream: #FAF7F2;
+  --color-cream-dark: #F0EDE6;
+  --color-charcoal: #1A1A1A; /* Deeper charcoal */
+  --color-charcoal-light: #2D2D2D;
+  --color-stone: #787268; /* More sophisticated stone */
+  --color-stone-light: #A39D94;
+  --color-terracotta: #B36B4E; /* More muted terracotta */
+  --color-terracotta-dark: #8C4F38;
+  --color-sage: #9BA793;
+  --color-sage-dark: #7C8974;
+  --color-ivory: #F5F2EC;
+  --color-warm-white: #FEFDFC;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  
+  --shadow-premium: 0 20px 40px rgba(0,0,0,0.08);
+  --transition-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* --- Base Styles --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  html {
+    cursor: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  line-height: 1.7;
+  font-weight: 400; /* Increased from 300 for better readability */
+  overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+p {
+  max-width: 65ch;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: var(--color-terracotta);
+  color: #fff;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone);
+}
+
+/* --- Utility Classes --- */
+.section-padding {
+  padding: clamp(80px, 15vh, 160px) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 80px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Cinematic Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  animation: noise 8s steps(10) infinite;
+}
+
+@keyframes noise {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0) }
+  70% { transform:translate(0, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+/* --- Masonry Grid --- */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.masonry-item {
+  width: 100%;
+}
+
+/* --- Lazy Loading --- */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 1.2s var(--transition-smooth), transform 1.2s var(--transition-smooth);
+  transform: scale(1.05);
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Smooth global transitions --- */
+button, a, input, textarea {
+  transition: all 0.5s var(--transition-smooth);
+}
+
+/* --- Contact form --- */
+.form-input {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid rgba(140,133,119,0.2);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  outline: none;
+}
+
+.form-input:focus {
+  border-bottom-color: var(--color-terracotta);
+}
+
+/* Animation Utilities */
+.reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Photographic Filters for Portraits */
+.designer-portrait {
+  filter: contrast(1.05) brightness(1.02) saturate(1.05);
+  transition: all 1.2s var(--transition-smooth);
+}
+
+.designer-portrait-container {
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+.designer-portrait-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
