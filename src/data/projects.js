@@ -19,7 +19,6 @@ import imgPoster4 from '../assets/projects/poster design 1.jpg';
 import imgShoe1 from '../assets/projects/shoe.jpg';
 import imgPackaging4 from '../assets/projects/face cream product designs.jpg';
 import imgPackaging5 from '../assets/projects/masala chips.jpg';
-import videoGooddocFull from '../assets/projects/GOOD DOC MOBILE APP VIDEO.mp4';
 
 const projects = [
   {
@@ -31,7 +30,7 @@ const projects = [
     client: 'GoodDoc Healthcare',
     role: 'UI/UX Designer & Motion Designer',
     thumbnail: imgApp1,
-    videos: [videoGooddocFull],
+    videos: [],
     images: [imgApp1, imgApp2],
     description: 'A comprehensive mobile healthcare platform designed to bridge the gap between patients and doctors through intuitive design and seamless interaction.',
     overview: 'GoodDoc provides a streamlined experience for booking appointments, managing medical records, and consulting with specialists virtually. The goal was to create a calm, trust-inspiring interface that remains highly functional for all age groups.',
