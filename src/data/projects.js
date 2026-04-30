@@ -229,6 +229,24 @@ const projects = [
     color: '#C67B5C',
   },
   {
+    id: 23,
+    slug: 'tryga-branding',
+    title: 'Tryga Branding',
+    category: 'Branding',
+    year: '2024',
+    client: 'Tryga Studio',
+    role: 'Lead Designer',
+    thumbnail: imgBranding2,
+    images: [imgBranding2],
+    description: 'A minimalist and modern branding project for a creative studio.',
+    overview: 'Tryga required an identity that was both versatile and striking, using clean typography and a monochrome palette.',
+    process: [
+      { step: 'Identity Design', detail: 'Developing a unique wordmark that balances technical precision with creative flair.' }
+    ],
+    results: 'The new identity was adopted across all digital and physical touchpoints.',
+    color: '#2A2A2A',
+  },
+  {
     id: 6,
     slug: 'haven-app-design',
     title: 'Haven App Design',
@@ -236,8 +254,8 @@ const projects = [
     year: '2024',
     client: 'Haven Wellness',
     role: 'Product Designer',
-    thumbnail: imgApp1,
-    images: [imgApp1, imgApp2],
+    thumbnail: imgApp2,
+    images: [imgApp2, imgApp1],
     description:
       'A meditation and wellness app with an organic, calming interface. The design prioritizes accessibility and creates a sense of tranquility.',
     overview:
@@ -271,7 +289,25 @@ const projects = [
     color: '#2A2A2A',
   },
   {
-    id: 8,
+    id: 24,
+    slug: 'visual-narrative',
+    title: 'Visual Narrative',
+    category: 'Editorial Design',
+    year: '2024',
+    client: 'Art & Culture Mag',
+    role: 'Art Director',
+    thumbnail: imgEditorial2,
+    images: [imgEditorial2, imgEditorial3],
+    description: 'An exploration of visual storytelling through photography and minimal layout.',
+    overview: 'This project focuses on the relationship between image and space, using a structured grid to tell a compelling story.',
+    process: [
+      { step: 'Curation', detail: 'Selecting images that create a cohesive emotional arc throughout the series.' }
+    ],
+    results: 'Featured in the International Editorial Design annual.',
+    color: '#A8B5A0',
+  },
+  {
+    id: 10,
     slug: 'essence-perfume',
     title: 'Essence Perfume',
     category: 'Packaging',
@@ -279,7 +315,7 @@ const projects = [
     client: 'Essence Co.',
     role: 'Art Director',
     thumbnail: imgPerfume1,
-    images: [imgPerfume1],
+    images: [imgPerfume1, imgPackaging3],
     description: 'Minimalist bottle and packaging design for a new fragrance line.',
     overview: 'The goal was to create a design that captures the ethereal nature of the fragrance through transparency and light.',
     process: [
@@ -342,9 +378,44 @@ const projects = [
     results: 'Increased social media engagement by 40% during the festival promotion.',
     color: '#C67B5C',
   },
-
   {
-    id: 21,
+    id: 25,
+    slug: 'organic-skincare',
+    title: 'Organic Skincare',
+    category: 'Packaging',
+    year: '2024',
+    client: 'Pure Earth',
+    role: 'Packaging Designer',
+    thumbnail: imgPackaging2,
+    images: [imgPackaging2, imgPackaging1],
+    description: 'Eco-friendly packaging for a range of organic face creams.',
+    overview: 'The goal was to create a design that reflects the natural ingredients and sustainable ethos of the brand.',
+    process: [
+      { step: 'Sustainable Design', detail: 'Using earthy tones and botanical illustrations to communicate the product\'s origins.' }
+    ],
+    results: 'Awarded for its innovative use of sustainable materials.',
+    color: '#8C8577',
+  },
+  {
+    id: 26,
+    slug: 'fragrance-campaign',
+    title: 'Fragrance Campaign',
+    category: 'Poster Design',
+    year: '2024',
+    client: 'Luxe Scent',
+    role: 'Visual Designer',
+    thumbnail: imgPoster3,
+    images: [imgPoster3, imgPerfume1],
+    description: 'A high-impact visual campaign for a new luxury fragrance line.',
+    overview: 'This campaign uses dramatic lighting and elegant typography to evoke the sensory experience of the fragrance.',
+    process: [
+      { step: 'Visual Strategy', detail: 'Creating a series of posters that translate the scent into a visual language.' }
+    ],
+    results: 'Significant increase in brand awareness and retail interest.',
+    color: '#2A2A2A',
+  },
+  {
+    id: 27,
     slug: 'modern-couture',
     title: 'Modern Couture',
     category: 'Fashion Photography',
